@@ -30,8 +30,15 @@ public class ApiItems {
     private IItemService service;
 
 
+    @GetMapping("/listar-item")
+    public ResponseEntity <?> get() { 
+
+        return new ResponseEntity<>(service.listarItems(),HttpStatus.OK); 
+    }
+
     @PostMapping("/nivel1")
-    public ResponseEntity <?> nivel1(@RequestBody Body body) throws ItemException {     
+    public ResponseEntity <?> nivel1(@RequestBody Body body) throws ItemException {    
+         
             String error="";    
             try {               
                 descartar(body.getItem_ids());
