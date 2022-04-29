@@ -58,7 +58,7 @@ public class ApiItems {
         Map<String,Integer> res = new HashMap<>();
         for (String key : items) {      
             if(res.containsKey(key)){
-                throw new ItemException(1,"Solo se puede comprar una unidad por item");
+                throw new ItemException(1,"Solo se puede comprar una unidad por itemsss");
             }else{
                 res.put(key, 1);
             }
